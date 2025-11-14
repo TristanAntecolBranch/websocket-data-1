@@ -179,3 +179,49 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# --- Project-specific additions ---
+
+# Data artifacts
+data/
+logs/
+checkpoints/
+tmp/
+*.parquet
+*.csv
+*.json
+
+# Secrets
+.env
+secrets/
+*.pem
+*.key
+*.crt
+
+# Docker
+docker/*.log
+docker/*.pid
+docker-compose.override.yml
+
+# Airflow
+orchestration/airflow/logs/
+orchestration/airflow/tmp/
+orchestration/airflow/dags/__pycache__/
+
+# dbt
+batch/dbt/target/
+batch/dbt/dbt_modules/
+
+# Spark
+processing/spark/checkpoints/
+processing/spark/logs/
+
+# Great Expectations
+quality/great_expectations/uncommitted/
+
+# VSCode
+.vscode/
+.history/
+
+# GitHub Actions temp files
+.github/workflows/*.tmp
